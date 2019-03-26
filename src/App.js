@@ -1,10 +1,13 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 //antd-mobile.css 样式
-import 'antd-mobile/dist/antd-mobile.css'
+import "antd-mobile/dist/antd-mobile.css";
 //页面
-import Test from "./components/Test"
+import Test from "./components/Test";
+import YellowTab from "./components/yellowTab";
+import GreenTab from "./components/greenTab";
 //头部
-import MusicPage from "./containers/nav"
+import MusicPage from "./containers/nav";
+import Musicfloor from "./containers/floor";
 import {
   HashRouter,
   Route,
@@ -15,12 +18,14 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <MusicPage/>
+        <MusicPage />
         <Switch>
           <Route exact path="/" component={Test} />
+          <Route exact path="/greenTab" component={GreenTab} />
+          <Route exact path="/yellowTab" component={YellowTab} />
           {/* <Route exact path="/music" component={MusicPage} /> */}
         </Switch>
-        
+        <Musicfloor />
       </Router>
     );
   }

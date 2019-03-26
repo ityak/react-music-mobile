@@ -1,0 +1,47 @@
+.floorMusic {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  border-top: rgb(212, 60, 51) 1px solid;
+  background: #f5f5f9;
+  max-height: 70px;
+}
+.floorMusic audio {
+  height: 40px;
+  width: 80%;
+  margin-right: 0;
+  position: fixed;
+  bottom: 10px;
+  right: 0;
+}
+/* .floorimg {
+  background: url("http://p4.music.126.net/Fs0DjAvcAAyAZa1dgXzFfQ==/109951163571833739.jpg?param=200y200");
+  width: 70px;
+  height: 70px;
+
+  border-radius: 50%;
+} */
+.floorimg {
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  /* transform:rotate(9deg); */
+  animation: App-logo-spin infinite 6s linear;
+  animation-play-state:paused;
+}
+.turn {
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  animation: App-logo-spin infinite 6s linear;
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

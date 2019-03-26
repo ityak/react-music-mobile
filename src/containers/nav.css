@@ -2,3 +2,39 @@
     background-color:linear-gradient( 22deg, rgb(252, 25, 9) 0%, rgb(76, 0, 255) 80%);
     height: 56px;
 }
+.my-drawer {
+    position: relative;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .my-drawer .am-drawer-sidebar {
+    background-color: #fff;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .my-drawer .am-drawer-sidebar .am-list {
+    width: 300px;
+    padding: 0;
+  }
+  .am-drawer-draghandle{
+    display:none
+  }
+  .am-drawer-content{
+      height: 0px;
+  }
+  #root{
+    position :relative; 
+  }
+  .tab-box{
+    /* position:fixed; left:100px;  top:100px; */
+    position :fixed;top :0;left: 0;
+    width: 100%;
+    padding-bottom: 10px;
+    z-index :2;
+  }
+  .navside{
+    /* position :fixed; */
+    /* height: 100%; */
+    /* position :fixed; */
+    /* z-index: 4; */
+  }
