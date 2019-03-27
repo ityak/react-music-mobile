@@ -9,7 +9,7 @@ import GreenTab from "./components/greenTab";
 import MusicPage from "./containers/nav";
 import Musicfloor from "./containers/floor";
 import {
-  HashRouter,
+  Redirect,
   Route,
   Switch,
   BrowserRouter as Router
@@ -24,6 +24,7 @@ class App extends Component {
           <Route exact path="/greenTab" component={GreenTab} />
           <Route exact path="/yellowTab" component={YellowTab} />
           {/* <Route exact path="/music" component={MusicPage} /> */}
+          <Redirect to="/greenTab" />
         </Switch>
         <Musicfloor />
       </Router>

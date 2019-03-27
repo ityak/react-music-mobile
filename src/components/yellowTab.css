@@ -1,16 +1,24 @@
-.yellowTab{
-    padding: 70px 0;
-    height: 100%;
+.yellowTab {
+  padding: 70px 0;
 }
-html,body,#root{
-    height: 100%;
+html,
+body,
+#root {
+  height: 100%;
 }
-.videoTab{
-    height: 45%;
-    border-bottom: 1px solid #ccc;
-    
+.videoTab {
+  height: 45%;
+  border-bottom: 1px solid #ccc;
+  margin-top: 5px;
 }
-.videoimg img{
-width: 40px;
-height: 40px;
+/* video{
+    height: 30%;
+} */
+.videoimg div img {
+  width: 40px;
+  height: 40px;
+}
+.videoimg div {
+  width: 40px;
+  height: 40px;
 }
