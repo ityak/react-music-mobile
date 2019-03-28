@@ -14,7 +14,8 @@ import {
 
 import rootReducer from './redux/reducers/reducers';
 import Test from './components/Test';
-import MusicPage from './containers/nav';
+// import MusicPage from './containers/nav';
+import TopNavBar from './containers/TopNavBar/TopNavBar'
 import Search from './components/Search';
 
 const middleware = [thunk];
@@ -28,8 +29,8 @@ class App extends Component {
     return (
       <Provider store={store}>
         <Router>
-          <MusicPage />
-          <Search />
+          <TopNavBar />
+          {/* <Search /> */}
           <Switch>
             <Route exact path="/" component={Test} />
             {/* <Redirect to="/login" /> */}

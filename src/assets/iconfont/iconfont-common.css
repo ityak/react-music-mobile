@@ -1,0 +1,5 @@
+@import  "./iconfont.css";
+
+:global(.am-icon):before {
+  font-family: "am-icon", "am-my-icon" !important;
+}

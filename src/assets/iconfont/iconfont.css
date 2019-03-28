@@ -1,0 +1,72 @@
+@font-face {font-family: "am-my-icon";
+  src: url('iconfont.eot?t=1553759861661'); /* IE9 */
+  src: url('iconfont.eot?t=1553759861661#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,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') format('woff2'),
+  url('iconfont.woff?t=1553759861661') format('woff'),
+  url('iconfont.ttf?t=1553759861661') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1553759861661#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.am-my-icon {
+  font-family: "am-my-icon" !important;
+  font-size: 1.4em;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-my-compass:before {
+  content: "\e77d";
+}
+
+.icon-my-play-circle:before {
+  content: "\e781";
+}
+
+.icon-my-smile:before {
+  content: "\e783";
+}
+
+.icon-my-message:before {
+  content: "\e78a";
+}
+
+.icon-my-user:before {
+  content: "\e7ae";
+}
+
+.icon-my-team:before {
+  content: "\e7af";
+}
+
+.icon-my-video:before {
+  content: "\e7da";
+}
+
+.icon-my-menu:before {
+  content: "\e7f4";
+}
+
+.icon-my-compass-fill:before {
+  content: "\e846";
+}
+
+.icon-my-play-circle-fill:before {
+  content: "\e847";
+}
+
+.icon-my-smile-fill:before {
+  content: "\e848";
+}
+
+.icon-my-video-fill:before {
+  content: "\e865";
+}
+
+.icon-my-search:before {
+  content: "\e8ef";
+}
+
+.icon-my-team-fill-copy:before {
+  content: "\e8f0";
+}

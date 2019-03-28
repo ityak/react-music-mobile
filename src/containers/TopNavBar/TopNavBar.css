@@ -1,0 +1,16 @@
+.top-nav-bar-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+}
+.top-nav-bar-mid{
+  width: 54%;
+}
+.top-nav-bar-blank{
+  width: 3%;
+  height: 40px;
+  border-radius: 50%;
+  padding: 0 4vmin;
+}

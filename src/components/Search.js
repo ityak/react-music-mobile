@@ -29,7 +29,7 @@ class Search extends Component {
 
     return (
       <>
-        <WhiteSpace />
+        {/* <WhiteSpace /> */}
         <SearchBar
           placeholder="点击搜索"
           maxLength={10}
@@ -40,7 +40,7 @@ class Search extends Component {
           onSubmit={this.handleSubmit}
           onCancel={() => this.handleSubmit(searchValue)}
         />
-        <WhiteSpace />
+        {/* <WhiteSpace /> */}
       </>
     );
   }
