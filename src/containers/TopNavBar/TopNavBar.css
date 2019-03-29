@@ -4,6 +4,7 @@
   left: 0;
   width: 100%;
   background-color: white;
+  box-shadow: 0 0 8px rgb(190, 189, 189);
 }
 .top-nav-bar-mid{
   width: 54%;

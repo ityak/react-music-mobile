@@ -1,0 +1,25 @@
+.my-box {
+  margin-top: calc(30px + 9vmin);
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+.my-box .my-nav {
+  box-sizing: border-box;
+  width: 100vw;
+  display: flex;
+  overflow-x: auto;
+}
+.my-box .my-nav::-webkit-scrollbar {
+  display: none;
+}
+.my-box .my-nav .round-icon-list{
+  margin-right: 6.5vmin;
+}
+.my-list-nav {
+  margin-top: 5vmin;
+}
+.my-box .my-white-space {
+  background-color: #eaeaea;
+}

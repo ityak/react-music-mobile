@@ -13,10 +13,11 @@ import {
 } from 'react-router-dom';
 
 import rootReducer from './redux/reducers/reducers';
-import Test from './components/Test';
+// import Test from './components/Test';
+import My from './containers/My/My'
 // import MusicPage from './containers/nav';
 import TopNavBar from './containers/TopNavBar/TopNavBar'
-import Search from './components/Search';
+// import Search from './components/Search';
 
 const middleware = [thunk];
 
@@ -32,7 +33,7 @@ class App extends Component {
           <TopNavBar />
           {/* <Search /> */}
           <Switch>
-            <Route exact path="/" component={Test} />
+            <Route exact path="/" component={My} />
             {/* <Redirect to="/login" /> */}
           </Switch>
         </Router>

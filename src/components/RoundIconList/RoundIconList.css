@@ -1,0 +1,15 @@
+.round-icon-list {
+  width: 16vmin;
+  height: 16vmin;
+  font-size: calc(10px + 1vmin);
+}
+
+.round-icon-list img {
+  width: 10vmin;
+  height: 10vmin;
+  border-radius: 50%;
+}
+
+.round-icon-list .am-flexbox {
+  width: 10vmax !important;
+}
