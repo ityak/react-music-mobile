@@ -1,7 +1,7 @@
 import './TopNavBar.css';
 import '../../assets/iconfont/iconfont-common.css';
 import React, { Component } from 'react';
-import { TabBar, Icon, Flex, WingBlank } from 'antd-mobile';
+import { TabBar, Flex } from 'antd-mobile';
 
 import smile from '../../assets/inconFont/smile.svg';
 import smileFill from '../../assets/inconFont/smile-fill.svg';
@@ -20,14 +20,8 @@ class TopNavBar extends Component {
 
   render() {
     return (
-      // <WingBlank >
       <Flex direction="row" justify="between" className="top-nav-bar-box">
-        <Flex
-          className="top-nav-bar-blank"
-          justify="center"
-          onClick={() => {
-            console.log(444);
-          }}>
+        <Flex className="top-nav-bar-blank" justify="center" onClick={() => {}}>
           <span className="am-my-icon icon-my-menu" />
         </Flex>
         <div className="top-nav-bar-mid">
@@ -155,7 +149,6 @@ class TopNavBar extends Component {
           <span className="am-my-icon icon-my-search" />
         </Flex>
       </Flex>
-      // </WingBlank>
     );
   }
 }

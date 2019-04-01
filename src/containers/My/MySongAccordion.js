@@ -1,3 +1,8 @@
+/**
+ *  手风琴
+ *
+*/
+
 import React from 'react';
 import {
   Accordion,
@@ -8,8 +13,7 @@ import {
 
 import './MySongAccordion.css';
 
-const MySongAccordion = (props) => {
-  console.log(props)
+const MySongAccordion = props => {
   return (
     <Accordion
       className="accordion__box"
@@ -18,11 +22,15 @@ const MySongAccordion = (props) => {
       }}
       accordion={false}>
       <AccordionItem className="accordion__item">
-        <AccordionItemTitle className="accordion__title" id={`accordion__title-${props.itemKey}`}>
+        <AccordionItemTitle
+          className="accordion__title"
+          id={`accordion__title-${props.itemKey}`}>
           <div className="accordion__arrow" role="presentation" />
           <sapn>{props.title}</sapn>
         </AccordionItemTitle>
-        <AccordionItemBody className="accordion__body" id={`accordion__body-${props.itemKey}`}>
+        <AccordionItemBody
+          className="accordion__body"
+          id={`accordion__body-${props.itemKey}`}>
           {props.children}
         </AccordionItemBody>
       </AccordionItem>
