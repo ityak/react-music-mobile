@@ -5,7 +5,7 @@
 import './ListIcon.css';
 
 import React from 'react';
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types';
 import { List } from 'antd-mobile';
 import { withRouter } from 'react-router-dom';
 
@@ -20,7 +20,7 @@ function ListIcon({ dataSource }) {
             return (
               <Item
                 key={`${v.title}_${i}`}
-                thumb={v.thumb}
+                thumb={<span className={`iconfont icon-my-${v.iconName} list-icons`} />}
                 arrow="horizontal"
                 onClick={() => {}}>
                 {`${v.title} (${v.number})`}
@@ -32,8 +32,8 @@ function ListIcon({ dataSource }) {
   );
 }
 
-ListIcon.defaultProps = {
-  // dataSource: PropTypes.
-}
+// ListIcon.defaultProps = {
+//   // dataSource: PropTypes.
+// };
 
 export default withRouter(ListIcon);

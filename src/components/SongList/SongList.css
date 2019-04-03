@@ -1,0 +1,25 @@
+.song-list-box {
+  box-sizing: border-box;
+  width: 100vw;
+  height: 14vmin;
+  padding: 2vmin 3.5vmin;
+}
+.song-list-box .song-list-left {
+  border-radius: 3px;
+  width: 11vmin;
+  height: 11vmin;
+  margin-right: 2.5vmin;
+}
+.song-list-box .song-list-left img {
+  width: 11vmin;
+  height: 11vmin;
+}
+.song-list-box .song-list-mid {
+  overflow-x: hidden;
+  height: 10vmin;
+  flex: 1 1 auto;
+  display: flex;
+}
+.song-list-box .song-list-right {
+  margin-right: 0.5vmin;
+}

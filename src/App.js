@@ -17,7 +17,7 @@ import rootReducer from './redux/reducers/reducers';
 import My from './containers/My/My'
 // import MusicPage from './containers/nav';
 import TopNavBar from './containers/TopNavBar/TopNavBar'
-// import Search from './components/Search';
+// import Search from './components/Search/Search';
 
 const middleware = [thunk];
 

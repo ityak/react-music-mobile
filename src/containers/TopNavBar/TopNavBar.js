@@ -1,29 +1,23 @@
 import './TopNavBar.css';
-import '../../assets/iconfont/iconfont-common.css';
-import React, { Component } from 'react';
-import { TabBar, Flex } from 'antd-mobile';
 
-import smile from '../../assets/inconFont/smile.svg';
-import smileFill from '../../assets/inconFont/smile-fill.svg';
-import find from '../../assets/inconFont/compass.svg';
-import findFill from '../../assets/inconFont/compass-fill.svg';
-import team from '../../assets/inconFont/team.svg';
-import teamFill from '../../assets/inconFont/team-fill.svg';
-import video from '../../assets/inconFont/video.svg';
-import videoFill from '../../assets/inconFont/video-fill.svg';
-// import menu from '../../assets/inconFont/menu.svg';
+import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
+import { TabBar, Flex } from 'antd-mobile';
 
 class TopNavBar extends Component {
   state = {
-    selectedTab: '',
+    selectedTab: 'mime',
   };
 
   render() {
     return (
       <Flex direction="row" justify="between" className="top-nav-bar-box">
         <Flex className="top-nav-bar-blank" justify="center" onClick={() => {}}>
-          <span className="am-my-icon icon-my-menu" />
+          <svg className="icon top-nav-bar-blank-icon" aria-hidden="true">
+            <use xlinkHref="#icon-my-menu" />
+          </svg>
         </Flex>
+
         <div className="top-nav-bar-mid">
           <TabBar
             unselectedTintColor="#949494"
@@ -33,27 +27,19 @@ class TopNavBar extends Component {
             <TabBar.Item
               key="Life"
               icon={
-                <div
-                  style={{
-                    width: '23px',
-                    height: '23px',
-                    background: `url(${smile}) center center /  23px 23px no-repeat`,
-                  }}
-                />
+                <svg className="icon top-nav-bar-mid-icon" aria-hidden="true">
+                  <use xlinkHref="#icon-my-smile" />
+                </svg>
               }
               selectedIcon={
-                <div
-                  style={{
-                    width: '23px',
-                    height: '23px',
-                    background: `url(${smileFill}) center center /  23px 23px no-repeat`,
-                  }}
-                />
+                <svg className="icon top-nav-bar-mid-icon" aria-hidden="true">
+                  <use xlinkHref="#icon-my-smile-fill" />
+                </svg>
               }
-              selected={this.state.selectedTab === 'blueTab'}
+              selected={this.state.selectedTab === 'mime'}
               onPress={() => {
                 this.setState({
-                  selectedTab: 'blueTab',
+                  selectedTab: 'mime',
                 });
               }}
               data-seed="logId"
@@ -61,28 +47,20 @@ class TopNavBar extends Component {
 
             <TabBar.Item
               icon={
-                <div
-                  style={{
-                    width: '23px',
-                    height: '23px',
-                    background: `url(${find}) center center /  23px 23px no-repeat`,
-                  }}
-                />
+                <svg className="icon top-nav-bar-mid-icon" aria-hidden="true">
+                  <use xlinkHref="#icon-my-compass" />
+                </svg>
               }
               selectedIcon={
-                <div
-                  style={{
-                    width: '23px',
-                    height: '23px',
-                    background: `url(${findFill}) center center /  23px 23px no-repeat`,
-                  }}
-                />
+                <svg className="icon top-nav-bar-mid-icon" aria-hidden="true">
+                  <use xlinkHref="#icon-my-compass-fill" />
+                </svg>
               }
               key="Koubei"
-              selected={this.state.selectedTab === 'redTab'}
+              selected={this.state.selectedTab === 'find'}
               onPress={() => {
                 this.setState({
-                  selectedTab: 'redTab',
+                  selectedTab: 'find',
                 });
               }}
               data-seed="logId1"
@@ -90,50 +68,34 @@ class TopNavBar extends Component {
 
             <TabBar.Item
               icon={
-                <div
-                  style={{
-                    width: '23px',
-                    height: '23px',
-                    background: `url(${team}) center center /  23px 23px no-repeat`,
-                  }}
-                />
+                <svg className="icon top-nav-bar-mid-icon" aria-hidden="true">
+                  <use xlinkHref="#icon-my-team" />
+                </svg>
               }
               selectedIcon={
-                <div
-                  style={{
-                    width: '23px',
-                    height: '23px',
-                    background: `url(${teamFill}) center center /  23px 23px no-repeat`,
-                  }}
-                />
+                <svg className="icon top-nav-bar-mid-icon" aria-hidden="true">
+                  <use xlinkHref="#icon-my-team-fill-copy" />
+                </svg>
               }
               key="Friend"
-              selected={this.state.selectedTab === 'greenTab'}
+              selected={this.state.selectedTab === 'friend'}
               onPress={() => {
                 this.setState({
-                  selectedTab: 'greenTab',
+                  selectedTab: 'friend',
                 });
               }}
             />
 
             <TabBar.Item
               icon={
-                <div
-                  style={{
-                    width: '23px',
-                    height: '23px',
-                    background: `url(${video}) center center /  23px 23px no-repeat`,
-                  }}
-                />
+                <svg className="icon top-nav-bar-mid-icon" aria-hidden="true">
+                  <use xlinkHref="#icon-my-video" />
+                </svg>
               }
               selectedIcon={
-                <div
-                  style={{
-                    width: '23px',
-                    height: '23px',
-                    background: `url(${videoFill}) center center /  23px 23px no-repeat`,
-                  }}
-                />
+                <svg className="icon top-nav-bar-mid-icon" aria-hidden="true">
+                  <use xlinkHref="#icon-my-video-fill" />
+                </svg>
               }
               key="mv"
               selected={this.state.selectedTab === 'mv'}
@@ -145,12 +107,15 @@ class TopNavBar extends Component {
             />
           </TabBar>
         </div>
+
         <Flex className="top-nav-bar-blank" justify="center">
-          <span className="am-my-icon icon-my-search" />
+          <svg className="icon top-nav-bar-blank-icon" aria-hidden="true">
+            <use xlinkHref="#icon-my-search" />
+          </svg>
         </Flex>
       </Flex>
     );
   }
 }
 
-export default TopNavBar;
+export default withRouter(TopNavBar);

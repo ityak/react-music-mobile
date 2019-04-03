@@ -1,7 +1,7 @@
 /**
  *  手风琴
  *
-*/
+ */
 
 import React from 'react';
 import {
@@ -26,7 +26,10 @@ const MySongAccordion = props => {
           className="accordion__title"
           id={`accordion__title-${props.itemKey}`}>
           <div className="accordion__arrow" role="presentation" />
-          <sapn>{props.title}</sapn>
+          <div>{`${props.title} (${props.num || 0})`}</div>
+          <svg className="icon accordion__title-right" aria-hidden="true">
+            <use xlinkHref="#icon-my-ellipsis-v" />
+          </svg>
         </AccordionItemTitle>
         <AccordionItemBody
           className="accordion__body"
