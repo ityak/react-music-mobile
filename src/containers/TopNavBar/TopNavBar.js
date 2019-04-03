@@ -6,10 +6,22 @@ import { TabBar, Flex } from 'antd-mobile';
 
 class TopNavBar extends Component {
   state = {
-    selectedTab: 'mime',
+    selectedTab: this.props.location.pathname,
+  };
+
+  handlePress = value => {
+    this.setState(
+      {
+        selectedTab: value,
+      },
+      () => {
+        this.props.history.push(`${value}`);
+      },
+    );
   };
 
   render() {
+    console.log(this.props.location.pathname)
     return (
       <Flex direction="row" justify="between" className="top-nav-bar-box">
         <Flex className="top-nav-bar-blank" justify="center" onClick={() => {}}>
@@ -36,12 +48,8 @@ class TopNavBar extends Component {
                   <use xlinkHref="#icon-my-smile-fill" />
                 </svg>
               }
-              selected={this.state.selectedTab === 'mime'}
-              onPress={() => {
-                this.setState({
-                  selectedTab: 'mime',
-                });
-              }}
+              selected={this.state.selectedTab === '/My'}
+              onPress={() => this.handlePress('/My')}
               data-seed="logId"
             />
 
@@ -57,12 +65,8 @@ class TopNavBar extends Component {
                 </svg>
               }
               key="Koubei"
-              selected={this.state.selectedTab === 'find'}
-              onPress={() => {
-                this.setState({
-                  selectedTab: 'find',
-                });
-              }}
+              selected={this.state.selectedTab === '/Find'}
+              onPress={() => this.handlePress('/Find')}
               data-seed="logId1"
             />
 
@@ -78,12 +82,8 @@ class TopNavBar extends Component {
                 </svg>
               }
               key="Friend"
-              selected={this.state.selectedTab === 'friend'}
-              onPress={() => {
-                this.setState({
-                  selectedTab: 'friend',
-                });
-              }}
+              selected={this.state.selectedTab === '/Friend'}
+              onPress={() => this.handlePress('/Friend')}
             />
 
             <TabBar.Item
@@ -97,13 +97,9 @@ class TopNavBar extends Component {
                   <use xlinkHref="#icon-my-video-fill" />
                 </svg>
               }
-              key="mv"
-              selected={this.state.selectedTab === 'mv'}
-              onPress={() => {
-                this.setState({
-                  selectedTab: 'mv',
-                });
-              }}
+              key="MV"
+              selected={this.state.selectedTab === '/MV'}
+              onPress={() => this.handlePress('/MV')}
             />
           </TabBar>
         </div>

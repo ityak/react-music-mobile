@@ -14,9 +14,10 @@ import {
 
 import rootReducer from './redux/reducers/reducers';
 // import Test from './components/Test';
-import My from './containers/My/My'
+import My from './containers/My/My';
+import Find from './containers/Find/Find';
 // import MusicPage from './containers/nav';
-import TopNavBar from './containers/TopNavBar/TopNavBar'
+import TopNavBar from './containers/TopNavBar/TopNavBar';
 // import Search from './components/Search/Search';
 
 const middleware = [thunk];
@@ -31,11 +32,12 @@ class App extends Component {
       <Provider store={store}>
         <Router>
           <TopNavBar />
-          {/* <Search /> */}
+
           <Switch>
-            <Route exact path="/" component={My} />
-            {/* <Redirect to="/login" /> */}
+            <Route exact path="/My" component={My} />
+            <Route exact path="/Find" component={Find} />
           </Switch>
+
         </Router>
       </Provider>
     );

@@ -1,0 +1,47 @@
+.find-box {
+  margin-top: calc(30px + 8vmin);
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+.find-box .slider-frame {
+  border-radius: 6px;
+  overflow: hidden;
+}
+.find-box .find-banner {
+  display: inline-block;
+  width: '100%';
+}
+.find-box .find-banner img {
+  width: 100%;
+  vertical-align: top;
+  min-height: 150px;
+}
+.find-box .find-banner-tag {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  height: 5vmin;
+  line-height: 5vmin;
+  padding: 0.8vmin 2vmin;
+  color: #ffffff;
+  font-size: 14px;
+  text-align: end;
+  border-top-left-radius: 6px;
+}
+.find-box .find-nav-list{
+  width: 100vw;
+  height: 100%;
+  margin-top: 5vmin;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 4vmin;
+  font-size: 14px !important;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.find-box .round-icon-list .am-flexbox {
+  width: auto;
+}

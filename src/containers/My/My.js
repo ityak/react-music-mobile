@@ -2,6 +2,7 @@ import './My.css';
 import React, { Component } from 'react';
 // import { connect } from 'react-redux';
 import { WhiteSpace } from 'antd-mobile';
+import QueueAnim from 'rc-queue-anim';
 
 import RoundIconList from '../../components/RoundIconList/RoundIconList';
 import ListIcon from '../../components/ListIcon/ListIcon';
@@ -185,13 +186,14 @@ class My extends Component {
         <div className="my-nav">
           {data.map((v, i) => {
             return (
-              <RoundIconList
-                title={v.title}
-                imgUrl={v.imgUrl}
-                type={v.type}
-                navTo={v.navTo}
-                key={v.title}
-              />
+              <QueueAnim key={v.title} type="left">
+                <RoundIconList
+                  title={v.title}
+                  imgUrl={v.imgUrl}
+                  type={v.type}
+                  navTo={v.navTo}
+                />
+              </QueueAnim>
             );
           })}
         </div>
@@ -223,6 +225,7 @@ class My extends Component {
                 title={v.title}
                 imgUrl={v.imgUrl}
                 num={v.num}
+                by={v.by}
               />
             );
           })}

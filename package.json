@@ -8,6 +8,7 @@
     "customize-cra": "^0.2.12",
     "fastclick": "^1.0.6",
     "prop-types": "^15.7.2",
+    "rc-queue-anim": "^1.6.12",
     "react": "^16.8.5",
     "react-accessible-accordion": "^2.4.5",
     "react-app-rewire-hot-loader": "^2.0.1",
