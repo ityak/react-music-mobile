@@ -7,6 +7,7 @@
     "axios": "^0.18.0",
     "customize-cra": "^0.2.12",
     "fastclick": "^1.0.6",
+    "good-storage": "^1.1.0",
     "prop-types": "^15.7.2",
     "rc-queue-anim": "^1.6.12",
     "react": "^16.8.5",

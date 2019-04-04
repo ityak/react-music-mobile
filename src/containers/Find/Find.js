@@ -1,10 +1,11 @@
 import './Find.css';
-
 import React from 'react';
 import { connect } from 'react-redux';
 import { Carousel, WingBlank } from 'antd-mobile';
 
 import RoundIconList from '../../components/RoundIconList/RoundIconList';
+import FindSongList from './FindSongList';
+
 import axios from '../../tools/toolOfAxios';
 
 const listIcons = [
@@ -36,22 +37,21 @@ const listIcons = [
     type: 4,
     navTo: 'xx4',
   },
-  {
-    imgUrl:
-      'https://p2.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg',
-    title: '直播',
-    type: 5,
-    navTo: 'xx5',
-  },
 ];
 
 class Find extends React.Component {
-  state = { data: [] };
+  state = { data: [], tuijian: [] };
 
   componentDidMount() {
     axios('/banner', {}).then(res => {
       this.setState({
         data: res.banners,
+      });
+    });
+
+    axios('/personalized', {}).then(res => {
+      this.setState({
+        tuijian: res.result.slice(0,29),
       });
     });
   }
@@ -81,18 +81,18 @@ class Find extends React.Component {
         </div>
 
         <div className="find-nav-list">
-          {listIcons.map((v, i) => {
-            return (
-              <RoundIconList
-                key={i}
-                imgUrl={v.imgUrl}
-                title={v.title}
-                type={v.type}
-                navTo={v.navTo}
-              />
-            );
-          })}
+          {listIcons.map((v, i) => (
+            <RoundIconList
+              key={i}
+              imgUrl={v.imgUrl}
+              title={v.title}
+              type={v.type}
+              navTo={v.navTo}
+            />
+          ))}
         </div>
+
+        <FindSongList title="推荐歌单" more="歌单广场" dataList={this.state.tuijian}/>
       </div>
     );
   }

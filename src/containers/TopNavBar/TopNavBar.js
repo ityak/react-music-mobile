@@ -1,114 +1,50 @@
 import './TopNavBar.css';
-
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { TabBar, Flex } from 'antd-mobile';
+import Svg from '../../components/Svg/Svg';
+
+const MyFlex = name => (
+  <Flex className="top-nav-bar-blank">
+    <Svg svgName={name} myClass="top-nav-bar-blank-icon" />
+  </Flex>
+);
+const items = [
+  { key: '/My', icon: 'smile', selectedIcon: 'smile-fill' },
+  { key: '/Find', icon: 'compass', selectedIcon: 'compass-fill' },
+  { key: '/MV', icon: 'video', selectedIcon: 'video-fill' },
+];
 
 class TopNavBar extends Component {
-  state = {
-    selectedTab: this.props.location.pathname,
-  };
+  state = { selectedTab: this.props.location.pathname };
 
   handlePress = value => {
-    this.setState(
-      {
-        selectedTab: value,
-      },
-      () => {
-        this.props.history.push(`${value}`);
-      },
-    );
+    this.setState({ selectedTab: value });
+    this.props.history.push(value);
   };
 
   render() {
-    console.log(this.props.location.pathname)
     return (
-      <Flex direction="row" justify="between" className="top-nav-bar-box">
-        <Flex className="top-nav-bar-blank" justify="center" onClick={() => {}}>
-          <svg className="icon top-nav-bar-blank-icon" aria-hidden="true">
-            <use xlinkHref="#icon-my-menu" />
-          </svg>
-        </Flex>
+      <Flex justify="between" className="top-nav-bar-box">
+        {MyFlex('menu')}
 
         <div className="top-nav-bar-mid">
-          <TabBar
-            unselectedTintColor="#949494"
-            tintColor="#33A3F4"
-            barTintColor="white"
-            tabBarPosition="top">
-            <TabBar.Item
-              key="Life"
-              icon={
-                <svg className="icon top-nav-bar-mid-icon" aria-hidden="true">
-                  <use xlinkHref="#icon-my-smile" />
-                </svg>
-              }
-              selectedIcon={
-                <svg className="icon top-nav-bar-mid-icon" aria-hidden="true">
-                  <use xlinkHref="#icon-my-smile-fill" />
-                </svg>
-              }
-              selected={this.state.selectedTab === '/My'}
-              onPress={() => this.handlePress('/My')}
-              data-seed="logId"
-            />
-
-            <TabBar.Item
-              icon={
-                <svg className="icon top-nav-bar-mid-icon" aria-hidden="true">
-                  <use xlinkHref="#icon-my-compass" />
-                </svg>
-              }
-              selectedIcon={
-                <svg className="icon top-nav-bar-mid-icon" aria-hidden="true">
-                  <use xlinkHref="#icon-my-compass-fill" />
-                </svg>
-              }
-              key="Koubei"
-              selected={this.state.selectedTab === '/Find'}
-              onPress={() => this.handlePress('/Find')}
-              data-seed="logId1"
-            />
-
-            <TabBar.Item
-              icon={
-                <svg className="icon top-nav-bar-mid-icon" aria-hidden="true">
-                  <use xlinkHref="#icon-my-team" />
-                </svg>
-              }
-              selectedIcon={
-                <svg className="icon top-nav-bar-mid-icon" aria-hidden="true">
-                  <use xlinkHref="#icon-my-team-fill-copy" />
-                </svg>
-              }
-              key="Friend"
-              selected={this.state.selectedTab === '/Friend'}
-              onPress={() => this.handlePress('/Friend')}
-            />
-
-            <TabBar.Item
-              icon={
-                <svg className="icon top-nav-bar-mid-icon" aria-hidden="true">
-                  <use xlinkHref="#icon-my-video" />
-                </svg>
-              }
-              selectedIcon={
-                <svg className="icon top-nav-bar-mid-icon" aria-hidden="true">
-                  <use xlinkHref="#icon-my-video-fill" />
-                </svg>
-              }
-              key="MV"
-              selected={this.state.selectedTab === '/MV'}
-              onPress={() => this.handlePress('/MV')}
-            />
+          <TabBar tabBarPosition="top">
+            {items.map(v => (
+              <TabBar.Item
+                key={v.key}
+                icon={<Svg svgName={v.icon} myClass="top-nav-bar-blank-icon" />}
+                selectedIcon={
+                  <Svg svgName={v.selectedIcon} myClass="top-nav-bar-blank-icon" />
+                }
+                selected={this.state.selectedTab === v.key}
+                onPress={() => this.handlePress(v.key)}
+              />
+            ))}
           </TabBar>
         </div>
 
-        <Flex className="top-nav-bar-blank" justify="center">
-          <svg className="icon top-nav-bar-blank-icon" aria-hidden="true">
-            <use xlinkHref="#icon-my-search" />
-          </svg>
-        </Flex>
+        {MyFlex('search')}
       </Flex>
     );
   }

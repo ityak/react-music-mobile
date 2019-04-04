@@ -1,8 +1,4 @@
-/**
- *  手风琴
- *
- */
-
+import './MySongAccordion.css';
 import React from 'react';
 import {
   Accordion,
@@ -11,7 +7,7 @@ import {
   AccordionItemBody,
 } from 'react-accessible-accordion';
 
-import './MySongAccordion.css';
+import SongList from '../../components/SongList/SongList';
 
 const MySongAccordion = props => {
   return (
@@ -41,4 +37,19 @@ const MySongAccordion = props => {
   );
 };
 
-export default MySongAccordion;
+const MySongAccordions = ({ dataSource, title, itemKey }) => (
+  <MySongAccordion itemKey={itemKey} title={title} num={dataSource.length}>
+    {dataSource.map((v, i) => {
+      return (
+        <SongList
+          key={`${v.title}_${i}`}
+          title={v.title}
+          imgUrl={v.imgUrl}
+          num={v.num}
+        />
+      );
+    })}
+  </MySongAccordion>
+);
+
+export default MySongAccordions;

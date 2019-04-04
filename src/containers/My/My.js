@@ -2,12 +2,11 @@ import './My.css';
 import React, { Component } from 'react';
 // import { connect } from 'react-redux';
 import { WhiteSpace } from 'antd-mobile';
-import QueueAnim from 'rc-queue-anim';
+// import QueueAnim from 'rc-queue-anim';
 
 import RoundIconList from '../../components/RoundIconList/RoundIconList';
 import ListIcon from '../../components/ListIcon/ListIcon';
-import MySongAccordion from './MySongAccordion';
-import SongList from '../../components/SongList/SongList';
+import MySongAccordions from './MySongAccordion';
 
 const data = [
   {
@@ -181,21 +180,23 @@ const songLists2 = [
 
 class My extends Component {
   render() {
+    const songAccordions = [
+      { dataSource: songLists1, title: '创建的歌单', itemKey: 1 },
+      { dataSource: songLists2, title: '收藏的歌单', itemKey: 2 },
+    ];
+
     return (
       <div className="my-box">
         <div className="my-nav">
-          {data.map((v, i) => {
-            return (
-              <QueueAnim key={v.title} type="left">
-                <RoundIconList
-                  title={v.title}
-                  imgUrl={v.imgUrl}
-                  type={v.type}
-                  navTo={v.navTo}
-                />
-              </QueueAnim>
-            );
-          })}
+          {data.map((v, i) => (
+            <RoundIconList
+              key={`${v.title}_${i}`}
+              title={v.title}
+              imgUrl={v.imgUrl}
+              type={v.type}
+              navTo={v.navTo}
+            />
+          ))}
         </div>
 
         <div className="my-list-nav">
@@ -203,33 +204,8 @@ class My extends Component {
         </div>
 
         <WhiteSpace className="my-white-space" />
-
-        <MySongAccordion itemKey={1} title="创建的歌单" num={songLists1.length}>
-          {songLists1.map((v, i) => {
-            return (
-              <SongList
-                key={`${v.title}_${i}`}
-                title={v.title}
-                imgUrl={v.imgUrl}
-                num={v.num}
-              />
-            );
-          })}
-        </MySongAccordion>
-
-        <MySongAccordion itemKey={2} title="收藏的歌单" num={songLists2.length}>
-          {songLists2.map((v, i) => {
-            return (
-              <SongList
-                key={`${v.title}_${i}`}
-                title={v.title}
-                imgUrl={v.imgUrl}
-                num={v.num}
-                by={v.by}
-              />
-            );
-          })}
-        </MySongAccordion>
+        <MySongAccordions {...songAccordions[0]} />
+        <MySongAccordions {...songAccordions[1]} />
       </div>
     );
   }

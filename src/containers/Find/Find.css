@@ -9,6 +9,7 @@
   overflow: hidden;
 }
 .find-box .find-banner {
+  touch-action: none;
   display: inline-block;
   width: '100%';
 }
@@ -31,11 +32,12 @@
   border-top-left-radius: 6px;
 }
 .find-box .find-nav-list{
+  box-sizing: border-box;
   width: 100vw;
   height: 100%;
   margin-top: 5vmin;
   border-bottom: 1px solid #ddd;
-  padding-bottom: 4vmin;
+  padding:0 3vw 4vw 3vw;
   font-size: 14px !important;
   overflow-x: hidden;
   display: flex;

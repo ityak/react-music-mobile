@@ -9,13 +9,18 @@
   box-sizing: border-box;
   width: 100vw;
   display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   overflow-x: auto;
 }
 .my-box .my-nav::-webkit-scrollbar {
   display: none;
 }
-.my-box .my-nav .round-icon-list{
-  margin-right: 6.5vmin;
+.my-box .my-nav .round-icon-list {
+  margin: 0 3.5vmin;
+}
+.my-box .my-nav .round-icon-list:last-child {
+  padding-right: 3.5vmin;
 }
 .my-list-nav {
   margin-top: 5vmin;
