@@ -8,6 +8,7 @@ import {
 } from 'react-accessible-accordion';
 
 import SongList from '../../components/SongList/SongList';
+import SVG from '../../components/SVG/SVG';
 
 const MySongAccordion = props => {
   return (
@@ -23,9 +24,7 @@ const MySongAccordion = props => {
           id={`accordion__title-${props.itemKey}`}>
           <div className="accordion__arrow" role="presentation" />
           <div>{`${props.title} (${props.num || 0})`}</div>
-          <svg className="icon accordion__title-right" aria-hidden="true">
-            <use xlinkHref="#icon-my-ellipsis-v" />
-          </svg>
+          <SVG svgName="ellipsis-v" myClass="accordion__title-right" />
         </AccordionItemTitle>
         <AccordionItemBody
           className="accordion__body"

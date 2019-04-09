@@ -2,7 +2,7 @@ import './My.css';
 import React, { Component } from 'react';
 // import { connect } from 'react-redux';
 import { WhiteSpace } from 'antd-mobile';
-// import QueueAnim from 'rc-queue-anim';
+// import QueueAnim from 'rc-queue-anim'; // 动画组件
 
 import RoundIconList from '../../components/RoundIconList/RoundIconList';
 import ListIcon from '../../components/ListIcon/ListIcon';

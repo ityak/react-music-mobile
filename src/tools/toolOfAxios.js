@@ -2,7 +2,7 @@ import axios from 'axios';
 import qs from 'qs';
 
 // 全局默认配置
-axios.defaults.baseURL = 'http://30.19.102.17:8060'; // http://127.0.0.1:8060
+axios.defaults.baseURL = 'http://30.19.102.18:8060'; // http://127.0.0.1:8060
 axios.defaults.timeout = 3000;
 axios.defaults.dataType = 'json';
 axios.defaults.headers['Content-Type'] =

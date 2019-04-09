@@ -17,12 +17,14 @@
     "react-app-rewire-styled-components": "^3.0.2",
     "react-app-rewired": "^2.1.1",
     "react-dom": "^16.8.5",
+    "react-keeper": "^2.1.12",
     "react-redux": "^6.0.1",
     "react-router-dom": "^5.0.0",
     "react-scripts": "2.1.8",
     "redux": "^4.0.1",
     "redux-logger": "^3.0.6",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "video-react": "^0.13.6"
   },
   "scripts": {
     "start": "set PORT=6001 & react-app-rewired start",

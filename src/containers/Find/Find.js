@@ -51,7 +51,7 @@ class Find extends React.Component {
 
     axios('/personalized', {}).then(res => {
       this.setState({
-        tuijian: res.result.slice(0,29),
+        tuijian: res.result.slice(0, 29),
       });
     });
   }
@@ -92,7 +92,11 @@ class Find extends React.Component {
           ))}
         </div>
 
-        <FindSongList title="推荐歌单" more="歌单广场" dataList={this.state.tuijian}/>
+        <FindSongList
+          title="推荐歌单"
+          more="歌单广场"
+          dataList={this.state.tuijian}
+        />
       </div>
     );
   }

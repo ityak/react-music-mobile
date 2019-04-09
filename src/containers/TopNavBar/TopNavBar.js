@@ -2,11 +2,11 @@ import './TopNavBar.css';
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { TabBar, Flex } from 'antd-mobile';
-import Svg from '../../components/Svg/Svg';
+import SVG from '../../components/SVG/SVG';
 
 const MyFlex = name => (
   <Flex className="top-nav-bar-blank">
-    <Svg svgName={name} myClass="top-nav-bar-blank-icon" />
+    <SVG svgName={name} myClass="top-nav-bar-blank-icon" />
   </Flex>
 );
 const items = [
@@ -33,9 +33,9 @@ class TopNavBar extends Component {
             {items.map(v => (
               <TabBar.Item
                 key={v.key}
-                icon={<Svg svgName={v.icon} myClass="top-nav-bar-blank-icon" />}
+                icon={<SVG svgName={v.icon} myClass="top-nav-bar-blank-icon" />}
                 selectedIcon={
-                  <Svg svgName={v.selectedIcon} myClass="top-nav-bar-blank-icon" />
+                  <SVG svgName={v.selectedIcon} myClass="top-nav-bar-blank-icon" />
                 }
                 selected={this.state.selectedTab === v.key}
                 onPress={() => this.handlePress(v.key)}

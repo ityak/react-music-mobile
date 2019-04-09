@@ -16,6 +16,7 @@ import rootReducer from './redux/reducers/reducers';
 // import Test from './components/Test';
 import My from './containers/My/My';
 import Find from './containers/Find/Find';
+import MV from './containers/MV/MV';
 // import MusicPage from './containers/nav';
 import TopNavBar from './containers/TopNavBar/TopNavBar';
 // import Search from './components/Search/Search';
@@ -36,8 +37,8 @@ class App extends Component {
           <Switch>
             <Route exact path="/My" component={My} />
             <Route exact path="/Find" component={Find} />
+            <Route exact path="/MV" component={MV} />
           </Switch>
-
         </Router>
       </Provider>
     );
