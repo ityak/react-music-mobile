@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from '../tools/toolOfAxios';
 
-import { SearchBar, WhiteSpace } from 'antd-mobile';
+import { SearchBar } from 'antd-mobile';
 
 class Search extends Component {
   state = { searchValue: '' };

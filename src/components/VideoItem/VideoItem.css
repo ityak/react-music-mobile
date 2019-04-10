@@ -4,12 +4,12 @@
   /* background-color: red; */
   padding-top: 2vmin;
 }
-.video-box .video-player .am-wingblank {
+.video-box .video-player .video-top {
   border-radius: 6px;
   overflow: hidden;
   position: relative;
 }
-.video-box .video-player .video-tag {
+/* .video-box .video-player .video-tag {
   position: absolute;
   right: 2vmin;
   top: 2vmin;
@@ -19,35 +19,59 @@
   border: 1px solid #fff;
   border-radius: 3vmin;
   background-color: rgba(255, 255, 255, 0.15);
-}
-.video-box .video-player .video-play-volume {
+} */
+/* .video-box .video-player .video-play-volume {
   position: absolute;
   left: 2vmin;
   bottom: 2vmin;
   color: #fff;
-}
-.video-box .video-player .video-play-times {
+} */
+/* .video-box .video-player .video-play-times {
   position: absolute;
   right: 2vmin;
   bottom: 2vmin;
   color: #fff;
-}
-/* .video-box .am-wingblank .hiden{
-  display: none;
 } */
 .video-box .video-react .video-react-big-play-button {
   border: none;
   background-color: transparent;
   font-size: 4.5em;
-  color: rgba(255, 255, 255, 0.6);
+  /* color: rgba(255, 255, 255, 0.6); */
+  color: transparent;
 }
-.video-box .video-title{
-  margin-top: 3vmin;
+.video-box .video-title {
+  padding: 3vmin 0;
+  border-bottom: 1px solid #c4c2c2;
 }
-.video-box .video-title .am-wingblank{
-  border-bottom: 1px solid #8a8a8a;
-}
-.video-box .video-white-space{
-  /* margin-top: 2vmin; */
+
+.video-box .video-white-space {
   background-color: #eaeaea;
+}
+.video-box .video-info {
+  padding: 3vmin 0;
+}
+.video-box .video-react .video-react-control-bar {
+  background-color: transparent;
+}
+.video-react .video-react-fullscreen-control{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.video-box .video-react .video-react-volume-menu-button,
+.video-box .video-react .video-react-play-control {
+  display: none;
+}
+.video-react .video-react-progress-control{
+  position: absolute;
+  bottom: -14px;
+  left: -2px;
+  width: 100%;
+  height: 100%;
+}
+.video-react .video-react-play-progress{
+  background-color: red;
+}
+.video-react .video-react-play-progress:before{
+  color: red;
 }
